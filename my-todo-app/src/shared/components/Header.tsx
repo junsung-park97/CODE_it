@@ -8,7 +8,7 @@ const Header = () => {
       <Link href="/" className="flex items-center">
         {/* 모바일: Small 로고 */}
         <Image
-          src="/images/logo/Size=Small.png"
+          src="/images/logo/Size=Small.svg"
           alt="할 일 관리 로고"
           width={71}
           height={40}
@@ -17,7 +17,7 @@ const Header = () => {
         />
         {/* 태블릿 이상: Large 로고 */}
         <Image
-          src="/images/logo/Size=Large.png"
+          src="/images/logo/Size=Large.svg"
           alt="할 일 관리 로고"
           width={151}
           height={40}

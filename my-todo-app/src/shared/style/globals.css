@@ -36,5 +36,10 @@
   --font-weight-medium: 700;
   --font-weight-nomal: 400;
 
+  /* shadow */
+  --shadow-pill-button: 3px 5px 0 0 #0f172a;
+  --shadow-circle-button: 2px 4px 0 0 #0f172a;
 
+  /* radius */
+  --radius-button: 1.5em;
 }
