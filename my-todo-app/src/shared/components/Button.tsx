@@ -7,14 +7,17 @@ interface ButtonPorps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: ButtonVar;
   shape?: ButtonShape;
   icon?: React.ReactNode;
-  chilren?: React.ReactNode;
+  children?: React.ReactNode;
 }
+
+//부모로부터 받은 variant별 색상별 스타일 정의
 const variantStyle: Record<ButtonVar, string> = {
   default: "bg-slate-100 text-slate-900 border-2 border-slate-900",
   primary: "bg-primary text-white",
   danger: "bg-rose text-white",
   success: "bg-lime text-slate-900",
 };
+
 const Button = ({
   variant = "default",
   shape = "pill",
@@ -23,8 +26,11 @@ const Button = ({
   className = "",
   ...props
 }: ButtonPorps) => {
+  // 베이스 스타일
   const base =
     "flex items-center justify-center font-bold cursor-pointer transition-opacity hover:opacity-80 active:opacity-60";
+
+  // 부모로 부터 shape을 받아 모양별 스타일 정의
   const shapeStyle =
     shape === "circle"
       ? "w-[2.5em] h-[2.5em] rounded-full"
