@@ -23,8 +23,8 @@ const variantStyle: Record<ButtonVar, string> = {
 
 // 부모로 부터 shape을 받아 모양별 스타일 정의
 const shapeStyle: Record<ButtonShape, string> = {
-  pill: "w-[10.2em] h-[3.2em] rounded-button gap-1 shadow-pill-button",
-  circle: "w-[3.5em] h-[3.4em] rounded-button shadow-circle-button",
+  pill: "w-[10.2em] h-[3.2em] rounded-medium gap-1 shadow-pill",
+  circle: "w-[3.5em] h-[3.4em] rounded-medium shadow-circle",
   "circle-lg": "w-[4em] h-[4em] rounded-full",
 };
 
