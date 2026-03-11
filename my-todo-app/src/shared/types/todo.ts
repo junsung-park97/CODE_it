@@ -4,7 +4,7 @@ export interface ToDoItem {
   name: string;
   isCompleted: boolean;
   memo?: string;
-  imagUrl?: string;
+  imageUrl?: string;
 }
 
 // item 생성 요청 interface
@@ -13,9 +13,9 @@ export interface CreateTodoRequest {
 }
 
 // item 수정 요청 interface
-export interface UpdataTodoRequest {
+export interface UpdateTodoRequest {
   name?: string;
   isCompleted?: boolean;
   memo?: string;
-  imagUrl?: string;
+  imageUrl?: string;
 }
