@@ -19,7 +19,7 @@ export default function RootLayout({
       <body className="">
         <Header />
         <div className="wrapper px-4 md:px-6 lg:w-[1200px] mx-auto my-0">
-          <InputBar></InputBar>
+          {children}
         </div>
       </body>
     </html>
