@@ -37,7 +37,7 @@ export const createTodo = async (
  * @param itemsId 수정할 to의 id
  * @returns 수정된 할 일
  */
-export const UpdataTodo = async (
+export const updataTodo = async (
   body: UpdateTodoRequest,
   itemsId: number,
 ): Promise<ToDoItem> => {
@@ -60,7 +60,7 @@ export const deleteTodo = async (itemsId: number): Promise<void> => {
  * @param file 업로드할 이미지 사진 (5MB 이하)
  * @returns 업로드된 이미지 URL
  */
-export const UploadImage = async (file: File): Promise<{ url: string }> => {
+export const uploadImage = async (file: File): Promise<{ url: string }> => {
   const formData = new FormData();
   formData.append("images", file);
   const { data } = await axiosInstance.post("/images/upload", formData, {

@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Header from "@/shared/components/Header";
 import "@/shared/style/globals.css";
 import InputBar from "@/shared/components/InputBar";
+import QueryProvider from "@/shared/components/QueryProvider";
 
 export const metadata: Metadata = {
   title: "Todo List",
@@ -17,10 +18,12 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body className="">
-        <Header />
-        <div className="wrapper px-4 md:px-6 lg:w-[1200px] mx-auto my-0">
-          {children}
-        </div>
+        <QueryProvider>
+          <Header />
+          <div className="wrapper px-4 md:px-6 lg:w-[1200px] mx-auto my-0">
+            {children}
+          </div>
+        </QueryProvider>
       </body>
     </html>
   );
