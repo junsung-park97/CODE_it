@@ -1,7 +1,7 @@
 // todo 아이템 interface
 export interface ToDoItem {
-  id: string;
-  title: string;
+  id: number;
+  name: string;
   isCompleted: boolean;
   memo?: string;
   imageUrl?: string;

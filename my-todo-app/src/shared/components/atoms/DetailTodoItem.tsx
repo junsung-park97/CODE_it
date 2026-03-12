@@ -7,11 +7,11 @@ import type { ToDoItem } from "@/shared/types/todo";
 
 interface DetailTodoItemProps {
   todo: ToDoItem;
-  onToggle: (id: string) => void;
+  onToggle: (id: number) => void;
 }
 
 const DetailTodoItem = ({ todo, onToggle }: DetailTodoItemProps) => {
-  const { id, title, isCompleted } = todo;
+  const { id, name, isCompleted } = todo;
 
   return (
     <div
@@ -30,7 +30,7 @@ const DetailTodoItem = ({ todo, onToggle }: DetailTodoItemProps) => {
           isCompleted ? "line-through" : ""
         }`}
       >
-        {title}
+        {name}
       </span>
 
       {/* 체크박스 너비만큼 우측 여백 */}

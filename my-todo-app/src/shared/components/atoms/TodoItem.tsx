@@ -10,7 +10,7 @@ interface TodoItemProps {
 }
 
 const TodoItem = ({ todo, onToggle }: TodoItemProps) => {
-  const { id, title, isCompleted } = todo;
+  const { id, name, isCompleted } = todo;
   return (
     <div
       className={`flex items-center gap-3 w-full px-4 py-3 rounded-full border-2 border-slate-900 ${
@@ -18,7 +18,7 @@ const TodoItem = ({ todo, onToggle }: TodoItemProps) => {
       }`}
     >
       {/* 체크박스 버튼 - 클릭 시 완료 토글 */}
-      <button onClick={() => onToggle(parseInt(id))} className="flex-shrink-0">
+      <button onClick={() => onToggle(id)} className="flex-shrink-0">
         {isCompleted ? <CheckboxFilledIcon /> : <CheckboxEmptyIcon />}
       </button>
 
@@ -29,7 +29,7 @@ const TodoItem = ({ todo, onToggle }: TodoItemProps) => {
           isCompleted ? "line-through" : ""
         }`}
       >
-        {title}
+        {name}
       </Link>
     </div>
   );

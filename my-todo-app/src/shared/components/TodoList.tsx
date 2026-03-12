@@ -6,11 +6,11 @@ import { ToDoItem } from "@/shared/types/todo";
 
 // 임시 더미 데이터
 const DUMMY_TODOS: ToDoItem[] = [
-  { id: "1", title: "비타민 챙겨 먹기", isCompleted: false },
-  { id: "2", title: "맥주 마시기", isCompleted: false },
-  { id: "3", title: "운동하기", isCompleted: false },
-  { id: "4", title: "은행 다녀오기", isCompleted: true },
-  { id: "5", title: "비타민 챙겨 먹기", isCompleted: true },
+  { id: 1, name: "비타민 챙겨 먹기", isCompleted: false },
+  { id: 2, name: "맥주 마시기", isCompleted: false },
+  { id: 3, name: "운동하기", isCompleted: false },
+  { id: 4, name: "은행 다녀오기", isCompleted: true },
+  { id: 5, name: "비타민 챙겨 먹기", isCompleted: true },
 ];
 
 const TodoList = () => {

@@ -7,8 +7,8 @@ import DetailActionButtons from "@/shared/components/DetailActionButton";
 import type { ToDoItem } from "@/shared/types/todo";
 
 const DUMMY_TODO: ToDoItem = {
-  id: "1",
-  title: "비타민 챙겨 먹기",
+  id: 1,
+  name: "비타민 챙겨 먹기",
   isCompleted: false,
   memo: "오메가 3, 프로폴리스, 아연 챙겨먹기",
   imageUrl: "",
