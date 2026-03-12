@@ -7,12 +7,12 @@ export interface ToDoItem {
   imageUrl?: string;
 }
 
-// item 생성 요청 interface
+// item 생성 요청 body
 export interface CreateTodoRequest {
   name: string;
 }
 
-// item 수정 요청 interface
+// item 수정 요청 body
 export interface UpdateTodoRequest {
   name?: string;
   isCompleted?: boolean;
