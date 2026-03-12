@@ -1,12 +1,15 @@
 // src/shared/components/atoms/MemoInput.tsx
 "use client";
 import Image from "next/image";
+import { useState } from "react";
 
 interface MemoInputProps {
-  memo?: string;
+  initMemo?: string;
 }
 
-const MemoInput = ({ memo }: MemoInputProps) => {
+const MemoInput = ({ initMemo }: MemoInputProps) => {
+  const [memo, setMemo] = useState("");
+
   return (
     <div className="relative flex-1 min-h-[240px] rounded-xl overflow-hidden">
       {/* 배경 이미지 */}
@@ -23,7 +26,11 @@ const MemoInput = ({ memo }: MemoInputProps) => {
         <textarea
           className="w-full flex-1 bg-transparent resize-none outline-none text-slate-800 text-s"
           placeholder="메모를 입력하세요"
-          defaultValue={memo}
+          defaultValue={initMemo}
+          onChange={(e) => {
+            setMemo(e.target.value);
+            console.log(memo);
+          }}
         />
       </div>
     </div>

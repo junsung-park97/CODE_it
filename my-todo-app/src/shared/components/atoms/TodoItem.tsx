@@ -9,6 +9,7 @@ interface TodoItemProps {
   onToggle: (id: number) => void;
 }
 
+//TODO: onToggle은 isCompleted상태를 관리 Zustand로 전역적으로 관리하면 될 듯
 const TodoItem = ({ todo, onToggle }: TodoItemProps) => {
   const { id, title, isCompleted } = todo;
   return (
