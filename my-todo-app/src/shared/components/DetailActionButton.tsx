@@ -1,8 +1,8 @@
 // src/shared/components/atoms/DetailActionButtons.tsx
 "use client";
 import Button from "@/shared/components/atoms/Button";
-import CheckIcon from "@/shared/components/icon/Check";
-import XIcon from "@/shared/components/icon/XIcon";
+import CheckIcon from "@/shared/icon/Check";
+import XIcon from "@/shared/icon/XIcon";
 
 interface DetailActionButtonsProps {
   onUpdate: () => void;

@@ -1,7 +1,7 @@
 // src/shared/components/TodoItem.tsx
 import Link from "next/link";
-import CheckboxEmptyIcon from "@/shared/components/icon/CheckboxEmptyIcon";
-import CheckboxFilledIcon from "@/shared/components/icon/CheckboxFillIcon";
+import CheckboxEmptyIcon from "@/shared/icon/CheckboxEmptyIcon";
+import CheckboxFilledIcon from "@/shared/icon/CheckboxFillIcon";
 import type { ToDoItem } from "@/shared/types/todo";
 
 interface TodoItemProps {
