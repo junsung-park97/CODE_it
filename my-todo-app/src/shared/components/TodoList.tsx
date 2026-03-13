@@ -4,20 +4,13 @@
 import TodoItem from "@/shared/components/atoms/TodoItem";
 import { ToDoItem } from "@/shared/types/todo";
 
-// 임시 더미 데이터
-const DUMMY_TODOS: ToDoItem[] = [
-  { id: 1, name: "비타민 챙겨 먹기", isCompleted: false },
-  { id: 2, name: "맥주 마시기", isCompleted: false },
-  { id: 3, name: "운동하기", isCompleted: false },
-  { id: 4, name: "은행 다녀오기", isCompleted: true },
-  { id: 5, name: "비타민 챙겨 먹기", isCompleted: true },
-];
+interface TodoListProps {
+  todoList: ToDoItem[];
+  doneList: ToDoItem[];
+  onToggle: (id: number, isCompleted: boolean) => void;
+}
 
-const TodoList = () => {
-  // isCompleted 필터링
-  const todos = DUMMY_TODOS.filter((todo) => !todo.isCompleted);
-  const dones = DUMMY_TODOS.filter((todo) => todo.isCompleted);
-
+const TodoList = ({ todoList, doneList, onToggle }: TodoListProps) => {
   return (
     <div className="flex flex-col lg:flex-row gap-6">
       {/* TO DO 섹션 */}
@@ -26,9 +19,12 @@ const TodoList = () => {
           TO DO
         </span>
         <ul className="flex flex-col gap-3">
-          {todos.map((todo) => (
+          {todoList.map((todo) => (
             <li key={todo.id}>
-              <TodoItem todo={todo} onToggle={() => {}} />
+              <TodoItem
+                todo={todo}
+                onToggle={() => onToggle(todo.id, todo.isCompleted)}
+              />
             </li>
           ))}
         </ul>
@@ -40,9 +36,14 @@ const TodoList = () => {
           DONE
         </span>
         <ul className="flex flex-col gap-3">
-          {dones.map((todo) => (
+          {doneList.map((todo) => (
             <li key={todo.id}>
-              <TodoItem todo={todo} onToggle={() => {}} />
+              <TodoItem
+                todo={todo}
+                onToggle={() => {
+                  onToggle(todo.id, todo.isCompleted);
+                }}
+              />
             </li>
           ))}
         </ul>
