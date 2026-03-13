@@ -1,3 +1,4 @@
+"use client";
 // 할 일 목록 상태 + 액션 관리
 import { useState } from "react";
 import { useTodos } from "@/shared/hooks/useTodos";
