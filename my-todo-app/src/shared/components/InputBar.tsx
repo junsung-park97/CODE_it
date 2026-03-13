@@ -1,5 +1,5 @@
 import Button from "@/shared/components/atoms/Button";
-import PlusIcon from "@/shared/components/icon/PlusIcon";
+import PlusIcon from "@/shared/icon/PlusIcon";
 import React from "react";
 
 interface InputBarProps {
