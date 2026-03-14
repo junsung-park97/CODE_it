@@ -9,7 +9,7 @@ interface InputBarProps {
 }
 const InputBar = ({ value, onChange, onSubmit }: InputBarProps) => {
   const handleKeydown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === "Enter") {
+    if (e.key === "Enter" && !e.nativeEvent.isComposing) {
       onSubmit();
     }
   };
