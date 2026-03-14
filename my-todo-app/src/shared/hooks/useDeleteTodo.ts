@@ -14,8 +14,9 @@ export const useDeleteTodo = () => {
   return useMutation({
     mutationFn: deleteTodo,
     onSuccess: (_, itemId) => {
-      queryClient.invalidateQueries({ queryKey: ["todos"] });
-      queryClient.removeQueries({ queryKey: ["todos", itemId] });
+      queryClient.invalidateQueries({ queryKey: ["todos"], exact: true });
+      // TODO: 삭제로직에 왜 todos의 특정 itemId를 가진 item 삭제를 명시하면 안될까?
+      // queryClient.removeQueries({ queryKey: ["todos", itemId] });
     },
   });
 };

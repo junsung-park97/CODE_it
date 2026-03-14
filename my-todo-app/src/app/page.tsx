@@ -15,16 +15,18 @@ export default function Home() {
   } = useTodoListPage();
   return (
     <>
-      <InputBar
-        value={inputValue}
-        onChange={setInputValue}
-        onSubmit={handleCreate}
-      />
-      <TodoList
-        todoList={todoList}
-        doneList={doneList}
-        onToggle={handleToggle}
-      />
+      <div className="flex flex-col my-6 gap-10">
+        <InputBar
+          value={inputValue}
+          onChange={setInputValue}
+          onSubmit={handleCreate}
+        />
+        <TodoList
+          todoList={todoList}
+          doneList={doneList}
+          onToggle={handleToggle}
+        />
+      </div>
     </>
   );
 }
