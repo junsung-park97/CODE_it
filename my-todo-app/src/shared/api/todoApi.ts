@@ -62,7 +62,7 @@ export const deleteTodo = async (itemsId: number): Promise<void> => {
  */
 export const uploadImage = async (file: File): Promise<{ url: string }> => {
   const formData = new FormData();
-  formData.append("images", file);
+  formData.append("image", file);
   const { data } = await axiosInstance.post("/images/upload", formData, {
     headers: { "Content-Type": "multipart/form-data" },
   });
